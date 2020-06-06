@@ -18,3 +18,6 @@ Entry in the config:
                                  evening_stop: 6,
                   }  
 		},
+
+
+the classification is explained in the sample css.
