@@ -1,1 +1,133 @@
 # cssswitch
+
+# Module: cssswitch
+
+Module for changing the time of the css. 
+It is possible to set one css for the day and one for the night.
+
+## Installation
+
+* Clone this repo into `~/MagicMirror/modules` directory.
+* Configure your `~/MagicMirror/config/config.js`:
+
+******************************************************************
+Entry in the config:
+
+
+		{
+			module: "cssswitch",
+			    config: {
+	                  evening_start: 21,        
+                      evening_stop: 6,
+            }  
+		},
+		
+******************************************************************		
+
+
+Example of the custom.css
+
+.morning {
+  background: #d4d4d4;
+}
+
+.morning .dimmed  {
+  color: #2c3e50;
+}
+
+.morning .normal {
+  color: #2c3e50;
+}
+
+.morning .bright  {
+  color: #2c3e50;
+}
+
+ .morning .module.clock,
+ .morning .module.calendar,
+ .morning .module.weatherforecast,
+ .morning .module.currentweather {
+  font-family: "Lato", sans-serif;
+  border: 1px solid #fff;
+  background-color: #f6f5f0;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: inset 10px 10px 15px -10px #c3c3c3, inset -10px -10px 15px -10px #ffffff;
+}
+
+.morning .clock .time {
+ color: #fffff;
+ font-size: 100px;
+ text-align: center;
+ margin-top: 30px;
+ font-family: "Lato", sans-serif;
+}
+
+.morning .clock .date  {
+  font-weight: bold;
+  color:#2c3e50;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background-color:#d4d4d4;
+  box-shadow: inset 1px 1px 2.5px rgba(0, 0, 0, 0.25), inset -2.5px -2.5px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+  padding: 0.25rem 0.25rem;
+  border-radius: 8px;
+}
+
+.evening {
+  background: #151515;
+}
+
+.evening .dimmed  {
+  color:#d4d4d4;
+}
+
+.evening .normal  {
+  color:#d4d4d4;
+}
+.evening .bright  {
+  color:#d4d4d4;
+}
+
+ .evening .module.clock,
+ .evening .module.calendar,
+ .evening .module.weatherforecast,
+ .evening .module.currentweather {
+  padding:8px;
+  background: #111;
+  background: linear-gradient(#1b1b1b, #111);
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #272727;
+  z-index: 1;
+  font-family: "Lato", sans-serif;
+}
+
+.evening .clock .time {
+ color: #fffff;
+ font-size: 100px;
+ text-align: center;
+ margin-top: 30px;
+ font-family: "Lato", sans-serif;
+}
+
+.evening .clock .date  {
+  font-weight: bold;
+  color:#2c3e50;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background-color:#d4d4d4;
+  box-shadow: inset 1px 1px 2.5px rgba(0, 0, 0, 0.25), inset -2.5px -2.5px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+  padding: 0.25rem 0.25rem;
+  border-radius: 8px;
+}
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
