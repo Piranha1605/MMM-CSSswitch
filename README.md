@@ -1,5 +1,5 @@
 # Module: cssswitch
-
+MagicMirror
 Module for changing the time of the css. 
 It is possible to set one css for the day and one for the night.
 
