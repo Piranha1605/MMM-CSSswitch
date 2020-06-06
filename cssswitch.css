@@ -1,0 +1,12 @@
+/* 
+Different look of the website based on the time of day
+*/
+
+
+.morning {
+  background: blue;
+}
+
+.evening {
+  background: black;
+}

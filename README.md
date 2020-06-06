@@ -1,5 +1,3 @@
-# cssswitch
-
 # Module: cssswitch
 
 Module for changing the time of the css. 
@@ -18,6 +16,7 @@ Entry in the config:
 			module: "cssswitch",
 			    config: {
 	                  evening_start: 21,        
+Beginning of the night css
                       evening_stop: 6,
             }  
 		},
@@ -26,7 +25,75 @@ Entry in the config:
 
 
 Example of the custom.css
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+ /**
+ * Fontstyle import
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+html {
+  cursor: default;
+  overflow: hidden;
+  background: black;
+}
+
+body {
+  margin: 10px;
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-bottom: -10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+ header {
+  text-transform: uppercase;
+  padding:4px;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color:#2c3e50;
+  height: 25px;
+  line-height: 30px;
+  border-bottom: none;
+  border-radius: 8px;
+  background-color:#d4d4d4;
+  box-shadow: inset 1px 1px 2.5px rgba(0, 0, 0, 0.25), inset -2.5px -2.5px 5px rgba(255, 255, 255, 0.3);
+}
+
+/**
+ * module.width_height
+ */
+
+.module.clock {
+  width:400px;
+  height:150px;
+}
+
+.module.weatherforecast {
+  width:400px;
+  height: 250px;
+}
+
+.module.currentweather {
+  height: 190px;
+  width:400px;
+}
+.module.calendar {
+  height: 350px;
+  width:400px;
+}
+
+ /**
+ * morning style
+ */
+ 
 .morning {
   background: #d4d4d4;
 }
@@ -34,15 +101,18 @@ Example of the custom.css
 .morning .dimmed  {
   color: #2c3e50;
 }
-
 .morning .normal {
   color: #2c3e50;
 }
-
 .morning .bright  {
   color: #2c3e50;
 }
-
+/**
+ * Damit alle Module den selben Style haben
+ * neu Module einfügen mit .module.Modulname
+ * module.background-color_border_shadow
+ */
+ 
  .morning .module.clock,
  .morning .module.calendar,
  .morning .module.weatherforecast,
@@ -62,7 +132,6 @@ Example of the custom.css
  margin-top: 30px;
  font-family: "Lato", sans-serif;
 }
-
 .morning .clock .date  {
   font-weight: bold;
   color:#2c3e50;
@@ -77,6 +146,11 @@ Example of the custom.css
   border-radius: 8px;
 }
 
+
+ /**
+ * evening style
+ */
+
 .evening {
   background: #151515;
 }
@@ -84,14 +158,17 @@ Example of the custom.css
 .evening .dimmed  {
   color:#d4d4d4;
 }
-
 .evening .normal  {
   color:#d4d4d4;
 }
 .evening .bright  {
   color:#d4d4d4;
 }
-
+/**
+ * Damit alle Module den selben Style haben
+ * neu Module einfügen mit .module.Modulname
+ * module.background-color_border_shadow
+ */
  .evening .module.clock,
  .evening .module.calendar,
  .evening .module.weatherforecast,
@@ -106,6 +183,10 @@ Example of the custom.css
   font-family: "Lato", sans-serif;
 }
 
+/**
+ * Uhr.
+ */
+
 .evening .clock .time {
  color: #fffff;
  font-size: 100px;
@@ -113,7 +194,6 @@ Example of the custom.css
  margin-top: 30px;
  font-family: "Lato", sans-serif;
 }
-
 .evening .clock .date  {
   font-weight: bold;
   color:#2c3e50;
